@@ -1,4 +1,21 @@
-      //Работа с переменными.
+      //Какие бывают значения:
+//number, string, boolean, object, null, undefined, Symbol
+//typeof этот оператор позволяет показать какого типа значение:
+console.log(typeof(0));// number
+console.log(typeof('0'));//string
+console.log(typeof(true));//boolean
+console.log(typeof(0));
+  let abrvalg = { //Создание объекта
+    type: "Slovo",
+    born: "from mind"
+  };
+  console.log(abrvalg.type);
+console.log(typeof(abrvalg));//object
+  let try1 = Symbol('try_symbol')//Создание символа
+  console.log(try1);
+console.log(typeof(try1));//Symbol
+
+//Работа с переменными.
 
 Объявите две переменные: admin и name.
 Запишите строку "Джон" в переменную name.
