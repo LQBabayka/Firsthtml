@@ -15,6 +15,20 @@ console.log(typeof(abrvalg));//object
   console.log(try1);
 console.log(typeof(try1));//Symbol
 
+    //Про приведение типов:
+//Следующие значения переведутся в булевый false: 0, '' (пустая строка), null, undefined, false
+//для проверки булева значения используется boolean()
+
+console.log(Boolean(0));//false
+console.log(Boolean(''));//false
+console.log(Boolean(null));//false
+console.log(Boolean(undefined));//false
+console.log(Boolean(false));//false
+console.log(Boolean('any'));//true
+console.log(Boolean(33));//true
+
+
+
 //Работа с переменными.
 
 Объявите две переменные: admin и name.
