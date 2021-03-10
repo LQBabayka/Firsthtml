@@ -164,4 +164,145 @@ if (age < 18) {
 }
 welcome();// только после объявления  конструкция выше заработает
 */
+  //task
+let str = 'abcde'
+console.log(str[0]);
+console.log(str[1]);
+console.log(str[2]);
+console.log(str[3]);
+console.log(str[4]);
+console.log(str[5]);// undefined after 'e' no string
+//Напишите скрипт, который считает количество секунд в часе.
+console.log(60*60*24);
+//*****************************************************************************
+  //Task
+/*
+let num  = 3
+console.log(num);
+let a = 10;
+let b = 2;
+console.log(a + b);
+console.log(a - b);
+console.log(b - a);
+console.log(a * b);
+console.log(a / b);
+let c = 15
+let d =2
+let result = c + d;
+console.log(result);
+*/
+/*
+let a = 17;
+let b = 10;
+let c = a - b
+let d = 7
+let result = c + d
+console.log(result);
+*/
+/*
+let str1 = 'Hi';
+let str2 = 'World';
+console.log(str1 + ' ' + str2);
+let name = 'Alex';
+console.log(str1 + ' ' + name);
+let age = 29
+console.log('i am' + ' ' + age + ' ' + 'year old');
+//let name111 = prompt('what is your name?', '')
+//alert(name111);
+//let numberKV = prompt('number please, i get square of this number')
+//alert(numberKV * numberKV);
+*/
+/*
+let hour = 19
+let min1 = 29
+let sec = 33
+console.log(hour + ':' + min1 + ':' + sec);
+let mass = ["hi", "world", "!"]
+console.log(mass[0] + ' ' + mass[1] + ' ' + mass[2]);
+let text = mass[0] + ' ' + mass[1] + ' ' + mass[2]
+console.log(text);
+mass[0] = "Bye"
+console.log(mass[0] + ' ' + mass[1] + ' ' + mass[2]);
+/////////////////
+let obj = {'Kolya':'1000', 'Vasya':'500', 'Petya':'200'};
+console.log(obj['Kolya']);
+let mass2 = [];
+mass2[0] = 1;
+mass2[1] = 2;
+mass2[2] = 3;
+console.log(mass2);
+*/
+/////////
+/*
+let i = 0//– она является так называемым счетчиком цикла. Счетчики используются для того, чтобы подсчитывать, сколько раз выполнился цикл.
+while (i < 5) {
+  i++
+  console.log(i);
+}
+******
+for (ii = 0; ii <= 9; ii++) {
+  console.log(ii);// выведет цифры от 1 до 9
+  //where:
+  //ii = 0 - начальные команды (это то, что выполнится перед стартом цикла. Они выполнятся только один раз)
+  // ii <= 9 - Условие окончания цикла (пока оно истинное, цикл будет работать)
+  //ii++ - Команды после прохода цикла (это команды, которые будут выполнятся каждый раз при окончании прохода цикла)
+  //console.log(ii); - тело цикла
+}
+*/
+//Цикл for для массивов
+//С помощью цикла for можно последовательно перебрать элементы массива:
+/*
+let arr2 = [1, 2, 3, 4, 5];
+for (let ig = 0; ig <= arr2.length-1; ig++) {
+  console.log(arr2[ig]);
+  console.log(arr2.length);
+}
+let arr3 = ['suk1', 'suk2', 'suk3', 'suk4', 'suk5'];//Пробую перебирать массив из строк
+for (let iii = 0; iii < arr3.length; iii++) {
+  if (arr3[3] = 'suk4') {
+    //alert('suk4')
+    break// Без прерывания все зависает
+  }
+}
+///////////////////////////////////////////////
+var myObjectW = {
+name: "Уася",
+surname: "Петров",
+age: 33,
+};
+console.log(myObjectW);
+let myObjectS = {Kolya: 200, Vasya: 300, Petya: 400, Yan: 'ohuilyard'}
+for (key in myObjectS) {
+  console.log(key);//Kolya Vasya Petya Yan
+}
+for (key in myObjectS) {
+  console.log(myObjectS[key]);//200 300 400 ohuilyard
+}
+*/
+/////////////////////////
+let arr33 = [2, 3, 4, 5];
+let result1 = 1
+for (var i = 0; i < 4; i++) {
+  result1 = result1 * arr33[i];
+}
+console.log(result1);
 
+//Минск - это Беларусь
+let myObjectA = {Minsk: 'Belorussia', Moskow: 'Russia', Kiev: 'Ukraine'}
+  for (let key in myObjectA) {
+    console.log(key + ' - this is ' + myObjectA[key] + '.');
+}
+/////////////////
+/*
+for (var ih = 1; ih <= 100; i++) {
+  if(ih % 2 == 0) {
+	document.write(ih + '<br>');
+  }
+}
+*/
+let resul1 = 0
+for (var i = 1; i <= 100; i++) {
+  resul1 = resul1 + i;
+
+}
+console.log(resul1);

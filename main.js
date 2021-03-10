@@ -1,4 +1,4 @@
-// Про переменные
+      // Про переменные
 var message; //это одностройчный коментарий в JS (a-z, A-Z. 0-9, $) и только с буквы, есть хоткей "стракл + /"
 /* Так начинается
 многострочный
@@ -20,6 +20,7 @@ getFullname: function() {
 return this.name + " " + this.surname;
 }
 };
+let myObjectS = {Kolya: 200, Vasya: 300, Petya: 400, Yan: 'ohuilyard'}
 // Вообще объявление переменной через var - устаревшая практика, она объявляет для всего кода и даже для обращающихся файлов.
 //В основном лучше использовать let и const ссылка: https://habr.com/ru/company/ruvds/blog/420359/
 // продолжение темы объявления  переменных
@@ -59,6 +60,27 @@ console.log(names); //Таким образом можно вывести вес
 if (10 > 1) {
 console.log("Первый ИФ)))");
 }
+/*
+//тут про модуль switch, который используется вместо нескольких if'ов:
+let aaa = 2+2
+
+switch (aaa) {
+  case 2:
+  alert('not enought');
+  break;
+  case 3:
+  alert('not enought2');
+  break;
+  case 4:// как раз он и стрельнет
+  alert('to the point');
+  break;
+  case 5:
+  alert('too enought');
+  break;
+  default: //этат ема нужна, если ни одно значение не подойдет
+  alert('havent got numbers')
+}
+*/
 //пояснение за знак =
 if ("5" === 5) {
 console.log("Знаки равенства имеют разные значения");
@@ -91,7 +113,7 @@ console.log("Десять меньше одного");
 } //Тут возле если возращается false и выполняется оператор else
 console.log("Стопэ!!!!!!!!!!!!!!!!");
 
-//Про циклы
+      //Про циклы
 //Они предназначены для повторения участков кода n количество раз
 for (var i = 0; i < 10; i++) {
 console.log(i);
@@ -141,27 +163,7 @@ while (u < 5) {
 console.log(u);
 u++
 }
-/*
-//тут про модуль switch, который используется вместо нескольких if'ов:
-let aaa = 2+2
 
-switch (aaa) {
-  case 2:
-  alert('not enought');
-  break;
-  case 3:
-  alert('not enought2');
-  break;
-  case 4:// как раз он и стрельнет
-  alert('to the point');
-  break;
-  case 5:
-  alert('too enought');
-  break;
-  default: //этат ема нужна, если ни одно значение не подойдет
-  alert('havent got numbers')
-}
-*/
           //Про Функции
 //главная идея функций это избавиться от дублёжки кода. Далее пример простой функции выводящей текст в консоли:
 function test() {
@@ -290,12 +292,28 @@ console.log(sum111(1, 2)); // 3
 
 
           // Про объекты
+
+
 console.log(myObject1);
 console.log(myObject1.name);// можно показать определенный параметр объекта
 myObject1.age = "35"; // можно изменить определенный параметр объекта
 console.log(myObject1.age);
 console.log(myObject1.getFullname());
 
+//let myObjectS = {Kolya: 200, Vasya: 300, Petya: 400, Yan: 'ohuilyard'} уже объявлен в переменных
+for (key in myObjectS) {
+  console.log(key);//Kolya Vasya Petya Yan
+} // такой цикл перебирает ключи
+for (key in myObjectS) {
+  console.log(myObjectS[key]);//200 300 400 ohuilyard
+} // такой цикл перебирает объекты
+/*
+for (var ih = 1; ih <= 100; i++) { //А такой цикл находит все четные числа и выводит на хтмл страницу
+  if(ih % 2 == 0) {
+	document.write(ih + '<br>');
+  }
+}
+*/
 //Вышеуказанные примеры взяты из ролика: https://www.youtube.com/watch?v=4QHFhIjF2L0&t=3733s&ab_channel=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%9F%D0%B0%D1%83%D0%BA%D0%BE%D0%B2
 
 //Про математику
