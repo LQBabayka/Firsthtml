@@ -306,3 +306,64 @@ for (var i = 1; i <= 100; i++) {
 
 }
 console.log(resul1);
+//
+// Создайте массив arr = ['a', 'b', 'c']. Выведите его на экран с помощью функции alert.
+//С помощью массива arr из предыдущего номера выведите на экран содержимое первого, второго и третьего элементов.
+let arr = ['a', 'b', 'c', 'd'];
+console.log(arr);
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+//выведите на экран строку 'a+b, c+d'.
+console.log(arr[0] + ' + ' + arr[1] + ',' + ' ' + arr[2] + ' + ' + arr[3]);
+//Создайте массив arr с элементами 2, 5, 3, 9. Умножьте первый элемент массива на второй, а третий элемент на четвертый. Результаты сложите, присвойте переменной result. Выведите на экран значение этой переменной.
+let arr2 = [2, 5, 3, 9]
+console.log((arr2[0] * arr2[1]) + (arr2[2] * arr2[3]));//(2*5)+(3*9)=10+27=37
+let result111 = (arr2[0] * arr2[1]) + (arr2[2] * arr2[3]);
+console.log(result111);
+//Создайте объект obj. Выведите на экран элемент с ключом 'c' двумя способами: через квадратные скобки и как свойство объекта:
+var obj1 = {a: 1, b: 2, c: 3};
+console.log(obj1.c);
+console.log(obj1["c"]);
+//Создайте объект с днями недели. Ключами в нем должны служить номера дней от начала недели (понедельник - первый и т.д.). Выведите на экран текущий день недели.
+let objDays = {1: 'monday', 2: 'tuesday', 3: 'wednesday', 4: 'thursday', 5: 'friday', 6: 'saturday', 7: 'sunday'};
+console.log(objDays[4]);
+let day = 4;
+console.log(objDays[day]);
+//Дан массив [ [1, 2, 3], [4, 5, 6], [7,8,9] ]. Выведите на экран цифру 4 из этого массива
+let massM = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
+console.log(massM);
+console.log(massM[1][0]);//4
+//Дан объект {js:['jQuery', 'Angular'], php: 'hello', css: 'world'}. Выведите с его помощью слово 'jQuery'.
+let massJ = {js:['jQuery', 'Angular'], php: 'hello', css: 'world'}
+console.log(massJ);
+console.log(massJ.js[0]);//jQuery
+console.log(massJ['js'][0]);//jQuery
+//Создайте двухмерный массив. Первые два ключа - это 'ru' и 'en'.
+//Пусть первый ключ содержит элемент, являющийся массивом названий дней недели по-русски,
+//а второй - по-английски. Выведите с помощью этого массива понедельник по-русски и среду
+//по английски (пусть понедельник - это нулевой день).
+let abrvalg = [];
+console.log(typeof(abrvalg));//object
+let massD = {ru:['пн', 'вт', 'ср', 'чт', 'пт',], en:['sun', 'mon', 'thu', 'wed', 'thur',]}
+console.log(massD);
+console.log(massD.ru[0] + ' ' + massD.en[2]);//пн thu
+//Пусть теперь в переменной lang хранится язык (она принимает одно из значений или 'ru', или 'en' - либо то, либо то),
+//а в переменной day - номер дня. Выведите словом день недели, соответствующий переменным lang и day.
+//То есть: если, к примеру, lang = 'ru' и day = 3 - то выведем 'среда'.
+let lang = ['ru', 'eng'];
+if (lang == 'ru' || 'eng') {
+  console.log('its work');
+}
+if (massD == 'ru' || 'en') {
+    console.log('its work too!!!');
+}
+let day1
+if (massD == ('ru' || 'en') ) {
+    console.log('its work too!!!');
+    console.log(ru);
+}
+function getday(lan, day) {//Функция которая определяет день недели
+  return massD[lan][day - 1];//минус нужен, так как счет идет с 0, а не с 1
+}
+console.log(getday('en', 3));//вводим язык и номер дня
