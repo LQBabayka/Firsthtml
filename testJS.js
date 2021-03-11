@@ -361,9 +361,11 @@ if (massD == 'ru' || 'en') {
 let day1
 if (massD == ('ru' || 'en') ) {
     console.log('its work too!!!');
-    console.log(ru);
 }
 function getday(lan, day) {//Функция которая определяет день недели
   return massD[lan][day - 1];//минус нужен, так как счет идет с 0, а не с 1
 }
+let ff1 = prompt('type language', 'ru or en')
+let ff2 = prompt('type numer of day', '1 to 5')
+alert(getday(ff1, ff2));
 console.log(getday('en', 3));//вводим язык и номер дня
