@@ -351,6 +351,7 @@ console.log(massD.ru[0] + ' ' + massD.en[2]);//пн thu
 //Пусть теперь в переменной lang хранится язык (она принимает одно из значений или 'ru', или 'en' - либо то, либо то),
 //а в переменной day - номер дня. Выведите словом день недели, соответствующий переменным lang и day.
 //То есть: если, к примеру, lang = 'ru' и day = 3 - то выведем 'среда'.
+/*
 let lang = ['ru', 'eng'];
 if (lang == 'ru' || 'eng') {
   console.log('its work');
@@ -369,3 +370,93 @@ let ff1 = prompt('type language', 'ru or en')
 let ff2 = prompt('type numer of day', '1 to 5')
 alert(getday(ff1, ff2));
 console.log(getday('en', 3));//вводим язык и номер дня
+*/
+//Выведем квадратный корень из отрицательного b не целого числа, преобрпазовав его в целое положительное
+console.log(Math.abs(-100.435));
+console.log(Math.round(Math.abs(-100.435)));//100
+///
+//Давайте выведем случайное целое число от 10 до 100:
+function getRandomtry(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomtry(10, 99));//Рандомное число в рамках введеных значений
+/////////
+console.log((32.6546878).toFixed(0));//32
+/////////
+//Даны переменные a = 10 и b = 3. Найдите остаток от деления a на b
+let aaa3 = 10
+let bbb3 = 5
+console.log(aaa3 % bbb3);
+//Даны переменные aaa3 и bbb3. Проверьте, что a делится без остатка на b.
+//Если это так - выведите 'Делится' и результат деления,
+//иначе выведите 'Делится с остатком' и остаток от деления.
+if ((aaa3 % bbb3) == 0) {
+  console.log('Delitsya' + ' ' + (aaa3 / bbb3));
+} else {
+  console.log('Ne delitsya' + ' ' + (aaa3 % bbb3));
+}
+//////////
+//Возведите 2 в 10 степень. Результат запишите в переменную st.
+let st = Math.pow(2,10);
+console.log(st);//1024
+//Найдите квадратный корень из 245.
+console.log(Math.sqrt(245));//15.652475842498529
+/////////////////////////
+//Дан массив с элементами 4, 2, 5, 19, 13, 0, 10.
+//Найдите квадратный корень из суммы кубов его элементов. c циклом
+let arr323 = [4, 2, 5, 19, 13, 0, 10];
+console.log(typeof(arr323));
+console.log(arr323[0]);
+console.log(arr323);
+var summ = 0;
+for (var ii = 0; ii < arr323.length; ii++) {
+  summ = summ + Math.pow(arr323[ii], 3)
+}
+console.log(Math.sqrt(summ));// это решение
+console.log(
+  Math.pow(arr323[0], 3) +
+  Math.pow(arr323[1], 3) +
+  Math.pow(arr323[2], 3) +
+  Math.pow(arr323[3], 3) +
+  Math.pow(arr323[4], 3) +
+  Math.pow(arr323[5], 3) +
+  Math.pow(arr323[6], 3)
+);
+console.log(Math.sqrt(10253));
+// Найдите квадратный корень из 379. Результат округлите до целых, до десятых, до сотых.
+let tyn = Math.sqrt(379)
+console.log(tyn);// Квадратный корень из 379
+console.log(Math.round(tyn)); // Целый
+console.log((tyn).toFixed(1));//Дусятые
+console.log((tyn).toFixed(2));//Сотые
+//Найдите квадратный корень из 587. Округлите результат в большую и меньшую стороны,
+//запишите результаты округления в объект с ключами 'floor' и 'ceil'.
+console.log(Math.sqrt(587));//квадратный корень из 587
+console.log(Math.ceil(Math.sqrt(587)));//Округление в большую сторону
+console.log(Math.floor(Math.sqrt(587)));//Округление в меньшую сторону
+let newarr1 = {
+  floor: Math.floor(Math.sqrt(587)),
+  ceil: Math.ceil(Math.sqrt(587))
+}
+console.log(newarr1);//результаты записаны
+////////////////////////////////////
+//Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число.
+//Math.min
+console.log(Math.min(4, -2, 5, 19, -130, 0, 10));
+console.log(Math.max(4, -2, 5, 19, -130, 0, 10));
+/////////////////////////////////////////
+//Заполните массив 10-ю случайными целыми числами.
+let lds =[];
+for (var iy = 0; iy < 10; iy++) {
+  lds.push(getRandomtry(1, 500))
+}
+console.log(lds);
+///////////////////////////////////////////
+//Дан массив arr. Найдите среднее арифметическое его элементов.
+//Проверьте задачу на массиве с элементами 12, 15, 20, 25, 59, 79.
+let ocharr = [12, 15, 20, 25, 59, 79];
+let ochsumm = 0
+for (var io = 0; io < ocharr.length; io++) {
+  ochsumm = ochsumm + ocharr[io]
+}
+console.log(ochsumm / ocharr.length );
