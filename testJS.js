@@ -460,3 +460,4 @@ for (var io = 0; io < ocharr.length; io++) {
   ochsumm = ochsumm + ocharr[io]
 }
 console.log(ochsumm / ocharr.length );
+//////////////////////////////////////////////////
