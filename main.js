@@ -355,8 +355,21 @@ console.log('abrvlg' in mqi);//false - mqi.abrvlg не существует
 //Вообще JS не выдает ошибку при обращении к несуществующему свойству, JS выведет undefined
 //Проверка через in нужна, если undefined вписан в какой нибудь ключ
 
-//Остановился на Цикл «for…in»
+//Цикл «for…in»
+//for (key in object) {тело цикла выполняется для каждого свойства объекта}
+let user234 = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
 
+for (let key in user234) {
+  // ключи
+  //alert( key );  // name, age, isAdmin
+  // значения ключей
+  //alert( user234[key] ); // John, 30, true
+}
+остановился на Упорядочение свойств объекта
 
 
 

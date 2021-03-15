@@ -461,3 +461,14 @@ for (var io = 0; io < ocharr.length; io++) {
 }
 console.log(ochsumm / ocharr.length );
 //////////////////////////////////////////////////
+//Пробую записаль данный из промпт в массив
+/*
+let testarr = [];
+let somenew = prompt('put here numbers', '0')
+
+if (somenew !== NaN || null || undefined) {
+  testarr.push(Number(somenew));
+}
+console.log(testarr);
+*/ // не получилось
+//////////////////////////////////////////////
