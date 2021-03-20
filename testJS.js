@@ -472,3 +472,49 @@ if (somenew !== NaN || null || undefined) {
 console.log(testarr);
 */ // не получилось
 //////////////////////////////////////////////
+let salaries = { //Напишите код для суммирования всех зарплат и сохраните результат в переменной sum
+  John: 100, //Если объект salaries пуст, то результат должен быть 0
+  Ann: 160,
+  Pete: 130
+}
+function sumSal() {
+  return salaries.John + salaries.Ann + salaries.Pete;
+}
+let summm = sumSal();
+console.log(summm);
+let summm2 = 0;
+for (let key in salaries) {
+  summm2 += salaries[key];
+}
+console.log(summm2);
+/////////////////////////////////////
+let useruser = {
+  name: 'somename',
+  age: 23,
+  interes: 'music',
+
+  sayHi() {
+    console.log(this.name);// this - это текущий объект
+  },
+  showAge() {
+    console.log(this.age);
+  },
+  showInts() {
+    console.log(this.interes);
+  }
+};
+useruser.sayHi();// somename
+useruser.showAge();// 23
+useruser.showInts();// music
+//У стрелочных функций нет «this»
+//Стрелочные функции особенные: у них нет своего «собственного» this. Если мы используем this внутри стрелочной функции, то его значение берётся из внешней «нормальной» функции
+//Пример:
+let userexample = {
+  firstName: "Илья",
+  sayHi() {
+    let arrow = () => console.log(this.firstName);
+    arrow();
+  }
+};
+
+userexample.sayHi(); // Илья

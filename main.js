@@ -369,8 +369,77 @@ for (let key in user234) {
   // значения ключей
   //alert( user234[key] ); // John, 30, true
 }
-остановился на Упорядочение свойств объекта
+//Про копирование и ссылки
+let message99 = 'Hayuchki'
+let stryhg = message99 // копируется не переменная, а ссылка
+console.log(stryhg);
+// Если изменить скопированный объект, основной тоже изменится.
+let userss = { name: 'Ivan'};
+let anotheruser = userss;
+anotheruser.name = 'Petya';
+console.log(userss.name);//Petya
+//Пример создания клона объекта путем переберания объектов
+let firstobj = {
+  name: 'Ivan',
+  shoes: 'V valenkax'
+};
 
+let cloneobj = {};
+
+for (let key in firstobj) {
+  cloneobj[key] = firstobj[key];
+}
+console.log(cloneobj);// покажет склонированный объект
+
+    //Про метод Object.assign
+//Синтаксис Object.assign(dest, [src1, src2, src3...])
+//Где dest — целевой объект, rc1, ..., srcN являются исходными объектами
+let cloneobj2 = Object.assign({}, firstobj); // задал новую переменную, в которую при  помощи метода скопировал объект firstobj
+console.log(cloneobj2);
+//Объединение нескольких объектов в один:
+let sampleobj = {
+key1: 'electron digitakt',
+key2: 'korg volca'
+};
+let sampleobj2 = {key3: 'octatrack'};
+let sampleobj3 = {key4: 'arturia keystep'};
+Object.assign(sampleobj, sampleobj2, sampleobj3);//скопировал 2 и 3 в первый сэмпл
+console.log(sampleobj);//если при объединении будут встречаться одинаковые ключи, они будут перезаписываться новыми значениями
+/////////////////////////////////////////
+    //Ключевое слово «this» в методах
+    let useruser = {
+      name: 'somename',
+      age: 23,
+      interes: 'music',//перебор объекта, необходимы запятые
+
+      sayHi() {
+        console.log(this.name);// this - это текущий объект
+      },//перебор объекта, необходимы запятые
+      showAge() {
+        console.log(this.age);
+      },//перебор объекта, необходимы запятые
+      showInts() {
+        console.log(this.interes);
+      }
+    };
+    useruser.sayHi();// somename
+    useruser.showAge();// 23
+    useruser.showInts();// music
+////////////
+//У стрелочных функций нет «this»
+//Стрелочные функции особенные: у них нет своего «собственного» this. Если мы используем this внутри стрелочной функции, то его значение берётся из внешней «нормальной» функции
+//Пример:
+let userexample = {
+  firstName: "Илья",
+  sayHi() {
+    let arrow = () => console.log(this.firstName);
+    arrow();
+  }
+};
+
+userexample.sayHi(); // Илья
+////////////
+//Остановился на задачках THIS
 
 
 console.log(myObject1);
