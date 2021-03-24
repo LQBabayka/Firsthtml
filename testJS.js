@@ -518,3 +518,101 @@ let userexample = {
 };
 
 userexample.sayHi(); // Илья
+///////////////
+function User(name) {//Создаем функцию
+  this.name = name;//Задаем парпаметры
+  this.isAdmin = false//Задаем парпаметры
+}
+let user = new User('Vasyok');//Через переменную и оператор new при помощи заведенной функции создаем новый объект
+console.log(user.name);
+//
+function MakeUser(some, any) {
+  this.first = some,
+  this.second = any
+}
+let word = new MakeUser('xxx', 'yyy');
+console.log(word.first);//xxx
+console.log(word.second);//yyy
+console.log(word);//Object MakeUser
+
+///////////////////// Функция калькулятора, с функциями запроса цифр, суммирования и умножения
+/*
+let calculator2 = {
+  sum() {
+    return this.a + this.b;
+  },
+  mul() {
+    return this.a * this.b;
+  },
+  read() {
+    this.a = +prompt('insert a point', '0');
+    this.b = +prompt('insert a point', '0');
+  }
+};
+
+calculator2.read();
+aler(calculator2.sum() );
+alert(calculator2.mul() );
+*/
+///////////////////////////
+//Это ladder (лестница) – объект, который позволяет подниматься вверх и спускаться
+//Измените код методов up, down и showStep таким образом, чтобы их вызов можно было сделать по цепочке, например так:
+//ladder.up().up().down().showStep();
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep: function() {
+    alert(this.step);
+    return this;
+  }
+};
+/*
+ladder.up();
+ladder.up();
+ladder.up();
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.down();
+ladder.showStep();//3
+
+ladder.up().up().down().showStep(); //1, Решением является возврат самого объекта в каждом методе.
+*/
+//////////////
+
+function Notebooks_R35_8_I(name) {
+  this.name = name;
+  this.proz = 'ryzen3500';
+  this.ozu = 'eight_gb';
+  this.video = 'integrated';
+  this.lcd = 'lcd';
+}
+
+function Notebooks_I5_8_I(name) {
+  this.name = name;
+  this.proz = core_i5;
+  this.ozu = eight_gb;
+  this.video = integrated;
+  this.lcd = ips;
+}
+
+let Ryzen_cheep = new Notebooks_R35_8_I('acer');
+console.log(Ryzen_cheep.name);//acer
+/////////////////////
+function Someuser(name, secondname) {
+  this.name = name;
+  this.secondname = secondname;
+  this.SayHi = function() {
+    console.log('Your name is ' + this.secondname + ' ' + this.name + ' !');
+  };
+}
+
+let prob = new Someuser('Chfrcko', 'Kashtanov');
+prob.SayHi();//Your name is Kashtanov Chfrcko !

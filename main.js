@@ -439,7 +439,37 @@ let userexample = {
 
 userexample.sayHi(); // Илья
 ////////////
-//Остановился на задачках THIS
+    //Конструкторы, создание объектов через "new"
+//синтаксис {...} позволяет создать только один объект. Но зачастую нам нужно создать множество однотипных объектов, таких как пользователи, элементы меню и т.д.
+function User(name) {//Создаем функцию
+  this.name = name;//Задаем свойство
+  this.isAdmin = false//Задаем свойство
+}
+let user = new User('Vasyok');//Через переменную и оператор new при помощи заведенной функции создаем новый объект
+console.log(user.name);
+//
+function MakeUser(some, any) {
+  this.first = some,
+  this.second = any
+}
+let word = new MakeUser('xxx', 'yyy');
+console.log(word.first);//xxx
+console.log(word.second);//yyy
+console.log(word);//Object MakeUser
+/////
+//в this можно добавлять не только свойства, но и методы:
+function Someuser(name, secondname) {
+  this.name = name;
+  this.secondname = secondname;
+  this.SayHi = function() {// в свойство вписываем функцию
+    console.log('Your name is ' + this.secondname + ' ' + this.name + ' !');
+  };
+}
+
+let prob = new Someuser('Chfrcko', 'Kashtanov');//создаем\объявляем новый объект
+prob.SayHi();//Your name is Kashtanov Chfrcko ! // вызываем метод
+///////////////////////
+//остановился на задачке "Создаём Accumulator"
 
 
 console.log(myObject1);
