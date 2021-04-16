@@ -616,3 +616,13 @@ function Someuser(name, secondname) {
 
 let prob = new Someuser('Chfrcko', 'Kashtanov');
 prob.SayHi();//Your name is Kashtanov Chfrcko !
+
+let frt = 0
+console.log(frt);//0
+isxod();//вызов функции, меняющий переменную
+console.log(frt);//5
+function isxod() {
+  frt = 5;
+}
+console.log(frt);//5
+
