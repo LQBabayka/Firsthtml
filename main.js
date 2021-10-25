@@ -125,6 +125,18 @@ console.log("Десять меньше одного");
 } //Тут возле если возращается false и выполняется оператор else
 console.log("Стопэ!!!!!!!!!!!!!!!!");
 
+//Тернарное выражение
+//Можно записать конструкцию при помощи if'ов:
+  let somePerem = false
+  if (somePerem) {
+    console.log('this is true')
+  } else {
+    console.log('this is false')
+  }
+//На следующее тернарное выражение:
+somePerem ? console.log('this is true') : console.log('this is false')
+//Это выглядит короче и умещается в одну строчку
+
       //Про циклы
 //Они предназначены для повторения участков кода n количество раз
 for (var i = 0; i < 10; i++) {
