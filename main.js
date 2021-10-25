@@ -332,7 +332,13 @@ let sum = function(a, b) {
 
 console.log(sum111(1, 2)); // 3
 
+//Пример использования функции для записи переменной:
+function calcYear(year) {
+   return 2020 - year
+}
 
+let antonAge = calcYear(1990)
+console.log(antonAge)
 
 
           // Про объекты
